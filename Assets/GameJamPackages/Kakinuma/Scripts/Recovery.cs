@@ -8,6 +8,7 @@ using UnityEngine;
 public class Recovery : ItemBase
 {
     GameObject _player;
+    [Tooltip("‰ñ•œ—Ê")]
     PlayerHp _playerHp;
     public float _recveryHp = 20f;
 
