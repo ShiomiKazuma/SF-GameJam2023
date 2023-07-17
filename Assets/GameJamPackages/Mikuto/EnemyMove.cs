@@ -6,14 +6,16 @@ public class EnemyMove : MonoBehaviour
 {
     [Tooltip("エネミーの移動速度パラメータ")]
     [SerializeField] float _moveSpeed = 1f;
-    [Tooltip("ターゲット")]
-    [SerializeField] GameObject _target;
+//    [Tooltip("ターゲット")]
+//    [SerializeField] GameObject _target;
+    GameObject _target;
     [Tooltip("移動の種類")]
     [SerializeField] MoveType _moveType = MoveType.Default;
     Rigidbody _rb;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _target = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
