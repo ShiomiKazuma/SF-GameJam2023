@@ -74,6 +74,24 @@ public class PlayerMuzzle : MonoBehaviour
     {
         _bulletTimer += Time.deltaTime;
 
+        if (_bulletSpeedUp)
+        {
+            _bulletSpeedTimer += Time.deltaTime;
+            if(_bulletSpeedTimer >= _bulletSpeedUpRoutine)
+            {
+                BulletSpeedDefault();
+            }
+        }
+
+        if (_bulletPowerUp)
+        {
+            _bulletPowerTimer -= Time.deltaTime;
+            if(_bulletPowerTimer >= _bulletPowerUpRoutine) 
+            {
+                BulletPowerDefault();
+            }
+        }
+
         if (Input.GetMouseButtonDown(0) && _playerCondition == PlayerCondition.WaterGun && _bulletTimer  > _waterGunInterval)
         {
             Instantiate(_waterBullet, _muzzlePos.position, Quaternion.identity);
@@ -82,11 +100,6 @@ public class PlayerMuzzle : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) && _playerCondition == PlayerCondition.CorkGun && _bulletTimer > _corkGunInterval)
         {
-            if(_changeCount == 0)
-            {
-                _playerMaterial = _corkGunMaterial;
-                _changeCount = 1;
-            }
             //ê^ÇÒíÜÇÃèeå˚
             Instantiate(_corkBullet, _muzzlePos.position, Quaternion.identity);
             _bulletTimer = 0;
@@ -100,7 +113,6 @@ public class PlayerMuzzle : MonoBehaviour
         _bulletSpeedUp = true;
         _bulletSpeedTimer = 0;
         _bulletSpeedUpRoutine = routine;
-        float _saveBulletSpeed = _currentBulletSpeed;
         _currentBulletSpeed = _currentBulletSpeed * powerUp;
     }
 
@@ -109,10 +121,9 @@ public class PlayerMuzzle : MonoBehaviour
     {
         _savePlayerCondition = _playerCondition;
         _bulletPowerUp = true;
-        _bulletTimer = 0;
-        _bulletSpeedTimer = routine;
-        float _saveBulletSpeed = _currentBulletSpeed;
-        _currentBulletSpeed = _currentBulletSpeed * powerUp;
+        _bulletPowerTimer = 0;
+        _bulletPowerUpRoutine = routine;
+        _currentBulletPower = _currentBulletPower * powerUp;
     }
 
     //íeë¨Çí èÌÇ…ñﬂÇ∑
@@ -130,12 +141,38 @@ public class PlayerMuzzle : MonoBehaviour
             }
         }
 
-        _bulletPowerUp = false;
+        _bulletSpeedUp = false;
     }
 
     //à–óÕÇå≥Ç…ñﬂÇ∑
     void BulletPowerDefault()
     {
+        if (_savePlayerCondition == _playerCondition)
+        {
+            if (_playerCondition == PlayerCondition.WaterGun)
+            {
+                _currentBulletPower = _waterBulletPower;
+            }
+            else if (_playerCondition == PlayerCondition.CorkGun)
+            {
+                _currentBulletPower = _corkGunBulletPower;
+            }
+        }
+
+        _bulletPowerUp = false;
+    }
+
+    public void ChangeCorkGun()
+    {
+        if (_changeCount == 0)
+        {
+            _playerMaterial = _corkGunMaterial;
+            _changeCount = 1;
+            _playerCondition = PlayerCondition.CorkGun;
+            _currentBulletSpeed = _corkGunBulletSpeed;
+            _currentBulletPower = _corkGunBulletPower;
+        }
+        
 
     }
 
