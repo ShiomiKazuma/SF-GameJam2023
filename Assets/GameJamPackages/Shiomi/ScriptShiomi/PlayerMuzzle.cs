@@ -143,7 +143,6 @@ public class PlayerMuzzle : MonoBehaviour
 
         _bulletSpeedUp = false;
 
-        Debug.Log("’e‘¬•’Ê");
     }
 
     //ˆĞ—Í‚ğŒ³‚É–ß‚·
@@ -163,7 +162,6 @@ public class PlayerMuzzle : MonoBehaviour
 
         _bulletPowerUp = false;
 
-        Debug.Log("ˆĞ—Í•’Ê");
     }
 
     public void ChangeCorkGun()
