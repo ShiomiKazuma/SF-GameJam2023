@@ -5,15 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BulletController : MonoBehaviour
 {
-    [SerializeField] PlayerMuzzle _playerMuzzle;
     float _damage;
     float _bulletSpeed;
     Rigidbody _rb;
 
     private void Start()
     {
-        //_damage = _playerMuzzle.;
-        //_bulletSpeed = _playerMuzzle.;
+        if (GameObject.FindObjectOfType<PlayerMuzzle>().TryGetComponent(out PlayerMuzzle _playerMuzzle))
+        {
+            _damage = _playerMuzzle._currentBulletPower;
+            _bulletSpeed = _playerMuzzle._currentBulletSpeed;
+        }
+        Debug.Log(_bulletSpeed);
         _rb = GetComponent<Rigidbody>();
         _rb.velocity = Camera.main.transform.TransformDirection(Vector3.forward) * _bulletSpeed;
         Destroy(gameObject, 3);
