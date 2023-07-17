@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 838546736028695764}
   - component: {fileID: 488229423228160374}
   m_Layer: 0
-  m_Name: CorkBullet
+  m_Name: CorkShot
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

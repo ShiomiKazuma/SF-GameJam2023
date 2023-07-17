@@ -1116,8 +1116,8 @@ MonoBehaviour:
   _waterBullet: {fileID: 8271839696886456437, guid: 28edd3e82f2c766429b02a809d918158, type: 3}
   _corkGunInterval: 0
   _corkGunMaterial: {fileID: 0}
-  _corkBullet: {fileID: 8271839696886456437, guid: 5ed27557155a74947b5d57923a0ef9f0, type: 3}
+  _corkBullet: {fileID: 3801397780996748431, guid: 892ee3e92a4e54547967102d3dbdc033, type: 3}
   _waterBulletSpeed: 20
   _waterBulletPower: 0
-  _corkGunBulletSpeed: 0
+  _corkGunBulletSpeed: 20
   _corkGunBulletPower: 0
