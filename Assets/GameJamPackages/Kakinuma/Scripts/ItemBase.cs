@@ -8,6 +8,12 @@ using UnityEngine;
 public abstract class ItemBase : MonoBehaviour
 {
     [SerializeField] AudioClip _sound;
+    public float _destroyTime;
+
+    private void Update()
+    {
+        Destroy(gameObject, _destroyTime);
+    }
 
     public abstract void Item();
 
