@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7534529863406118089}
   - component: {fileID: 7322939369614406197}
   - component: {fileID: 3188054122387915830}
+  - component: {fileID: 6145998834490554018}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -167,6 +168,20 @@ MonoBehaviour:
   _itemPrefab: []
   _enemy: {fileID: 346773495230220715}
   _generationProbability: 50
+--- !u!114 &6145998834490554018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346773495230220715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f84b2192014144393036ca14842f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyAtk: 10
+  _plyaerTag: Player
 --- !u!1 &8472706223678789416
 GameObject:
   m_ObjectHideFlags: 0
