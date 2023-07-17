@@ -7,7 +7,7 @@ public class SpeedUpBullet : ItemBase
     GameObject _player;
     PlayerMuzzle _playerMuzzleScript;
     [Tooltip("’e‘¬")]
-    public float _upPower;
+    public float _upSpeed;
     [Tooltip("Œø‰ÊŽžŠÔ")]
     public float _routine;
     // Start is called before the first frame update
@@ -20,6 +20,6 @@ public class SpeedUpBullet : ItemBase
     // Update is called once per frame
     public override void Item()
     {
-        _playerMuzzleScript.PowerUpBulletPower(_upPower, _routine);
+        _playerMuzzleScript.PowerUpBulletSpeed(_upSpeed, _routine);
     }
 }
