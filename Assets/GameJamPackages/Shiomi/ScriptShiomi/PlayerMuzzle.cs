@@ -101,7 +101,7 @@ public class PlayerMuzzle : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && _playerCondition == PlayerCondition.CorkGun && _bulletTimer > _corkGunInterval)
         {
             //^‚ñ’†‚ÌeŒû
-            Instantiate(_corkBullet, _muzzlePos.position, Quaternion.identity);
+            Instantiate(_corkBullet, _muzzlePos.position, Camera.main.transform.rotation);
             _bulletTimer = 0;
         }
     }

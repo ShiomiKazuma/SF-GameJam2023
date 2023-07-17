@@ -1,11 +1,9 @@
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using UnityEngine;
-using Slider = UnityEngine.UI.Slider;
 
 public class PlayerHp : MonoBehaviour
 {
     //HPバーを設定
-    [SerializeField, Header ("HPバーを設定")] private LifeGauge _slider = default;
+    //[SerializeField, Header ("HPバーを設定")] private LifeGauge _slider = default;
 
     /// <summary>体力の最大値/// </summary>
     [SerializeField, Header("体力の最大値")] public float _maxHp = 100.0f;
@@ -23,6 +21,6 @@ public class PlayerHp : MonoBehaviour
     {
         _curentHp -= damage;
         //HPバーの更新
-        _slider.Damaged();
+        //_slider.Damaged();
     }
 }
