@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GameJamPackages/ueno/InGame/InGameScene.unity
+    guid: 39ad9f37df2e72547849b073624be53f
+  - enabled: 1
+    path: Assets/GameJamPackages/ueno/GameOver/ResultScene.unity
+    guid: 17d06f02488a2cc49b33e114eaf054a5
+  - enabled: 1
+    path: Assets/GameJamPackages/ueno/Title/TitleScene.unity
+    guid: 18d8a067933cb724e8224f9bb9801ede
+  - enabled: 1
+    path: Assets/GameJamPackages/ueno/Operation/OperationScene.unity
+    guid: 13d95c92455f34e48b763e9627c3e42b
   m_configObjects: {}
