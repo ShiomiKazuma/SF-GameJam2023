@@ -52,6 +52,8 @@ public class PlayerMuzzle : MonoBehaviour
     float _bulletSpeedTimer;
     float _bulletPowerTimer;
 
+    PlayerCondition _savePlayerCondition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,8 +93,10 @@ public class PlayerMuzzle : MonoBehaviour
         }
     }
 
-    void PowerUpBulletSpeed(float powerUp, float routine)
+    //弾速のパワーアップ
+    public void PowerUpBulletSpeed(float powerUp, float routine)
     {
+        _savePlayerCondition = _playerCondition;
         _bulletSpeedUp = true;
         _bulletSpeedTimer = 0;
         _bulletSpeedUpRoutine = routine;
@@ -100,8 +104,10 @@ public class PlayerMuzzle : MonoBehaviour
         _currentBulletSpeed = _currentBulletSpeed * powerUp;
     }
 
-    void PowerUpBulletPower(float powerUp, float routine)
+    //威力のパワーアップ
+    public void PowerUpBulletPower(float powerUp, float routine)
     {
+        _savePlayerCondition = _playerCondition;
         _bulletPowerUp = true;
         _bulletTimer = 0;
         _bulletSpeedTimer = routine;
@@ -109,7 +115,31 @@ public class PlayerMuzzle : MonoBehaviour
         _currentBulletSpeed = _currentBulletSpeed * powerUp;
     }
 
-    
+    //弾速を通常に戻す
+    void BulletSpeedDefault()
+    {
+        if(_savePlayerCondition == _playerCondition)
+        {
+            if(_playerCondition == PlayerCondition.WaterGun)
+            {
+                _currentBulletSpeed = _waterBulletSpeed;
+            }
+            else if(_playerCondition == PlayerCondition.CorkGun)
+            {
+                _currentBulletSpeed = _corkGunBulletSpeed;
+            }
+        }
+
+        _bulletPowerUp = false;
+    }
+
+    //威力を元に戻す
+    void BulletPowerDefault()
+    {
+
+    }
+
+    //威力を元に戻す
 
     //public IEnumerator PowerUpGunBullet(float powerUp, float routine)
     //{
@@ -135,13 +165,12 @@ public class PlayerMuzzle : MonoBehaviour
     //        _currentBulletPower = _saveBulletPower;
     //    }
 
-}
-
-
-
     public enum PlayerCondition
     {
         WaterGun,
         CorkGun,
     }
 }
+
+
+
