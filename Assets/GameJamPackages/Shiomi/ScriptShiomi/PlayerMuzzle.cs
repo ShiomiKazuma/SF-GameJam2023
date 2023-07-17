@@ -94,7 +94,7 @@ public class PlayerMuzzle : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && _playerCondition == PlayerCondition.WaterGun && _bulletTimer  > _waterGunInterval)
         {
-            Instantiate(_waterBullet, _muzzlePos.position, Quaternion.identity);
+            Instantiate(_waterBullet, _muzzlePos.position, Camera.main.transform.rotation);
             _bulletTimer = 0;
         }
 

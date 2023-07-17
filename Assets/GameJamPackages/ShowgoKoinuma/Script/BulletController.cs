@@ -18,7 +18,7 @@ public class BulletController : MonoBehaviour
         }
         Debug.Log(_bulletSpeed);
         _rb = GetComponent<Rigidbody>();
-        _rb.velocity = Camera.main.transform.TransformDirection(Vector3.forward) * _bulletSpeed;
+        _rb.velocity = transform.forward * _bulletSpeed;
         Destroy(gameObject, 3);
     }
 
