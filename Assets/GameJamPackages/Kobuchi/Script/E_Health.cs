@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class E_Health : MonoBehaviour
 {
-    [SerializeField] private float _initHealth;
     [SerializeField] private string _bulletTag;
     
     public float _health;
@@ -12,8 +11,6 @@ public class E_Health : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
-
-        _health = _initHealth;
     }
 
     private void Update()
@@ -28,7 +25,7 @@ public class E_Health : MonoBehaviour
 
     private void DeadAnim()
     {
-        _animator.SetTrigger("IsDead");
+        _animator.SetTrigger("IsDead"); 
     }
 
     private void EndDeadAnim()
