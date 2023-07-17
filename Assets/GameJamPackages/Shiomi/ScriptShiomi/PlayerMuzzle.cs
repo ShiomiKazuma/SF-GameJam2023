@@ -85,7 +85,7 @@ public class PlayerMuzzle : MonoBehaviour
 
         if (_bulletPowerUp)
         {
-            _bulletPowerTimer -= Time.deltaTime;
+            _bulletPowerTimer += Time.deltaTime;
             if(_bulletPowerTimer >= _bulletPowerUpRoutine) 
             {
                 BulletPowerDefault();
@@ -142,6 +142,8 @@ public class PlayerMuzzle : MonoBehaviour
         }
 
         _bulletSpeedUp = false;
+
+        Debug.Log("’e‘¬•’Ê");
     }
 
     //ˆĞ—Í‚ğŒ³‚É–ß‚·
@@ -160,6 +162,8 @@ public class PlayerMuzzle : MonoBehaviour
         }
 
         _bulletPowerUp = false;
+
+        Debug.Log("ˆĞ—Í•’Ê");
     }
 
     public void ChangeCorkGun()

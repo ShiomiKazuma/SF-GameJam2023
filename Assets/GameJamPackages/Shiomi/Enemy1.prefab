@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 4017338765824883396}
   - component: {fileID: 6797156746820844376}
   - component: {fileID: 3236995459252518974}
+  - component: {fileID: 1768287766244995529}
   m_Layer: 6
   m_Name: Enemy1
   m_TagString: Untagged
@@ -133,7 +134,7 @@ Transform:
   m_Children:
   - {fileID: 7230158144812908335}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4769233901316104127
 Rigidbody:
@@ -175,7 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
-  _target: {fileID: 0}
   _moveType: 0
 --- !u!114 &7598173586031635687
 MonoBehaviour:
@@ -262,3 +262,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1768287766244995529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7848582364889181685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5e1edccb4864443b62800245d84bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab:
+  - {fileID: 137085193126085066, guid: 1f3c08ebe47991c4185b44c210037ac1, type: 3}
+  - {fileID: 7607636709236406388, guid: 24d0b160ed1e7ac4e9e2792f93c6d2da, type: 3}
+  - {fileID: 7296043090622181978, guid: fcc276a01acbb10499f2e85ceb25e7d4, type: 3}
+  - {fileID: 7919369327555235986, guid: 116dc52bfd495c54fbb8a22541ac978d, type: 3}
+  _enemy: {fileID: 7848582364889181685}
+  _generationProbability: 100
