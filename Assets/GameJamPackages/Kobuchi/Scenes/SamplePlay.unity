@@ -612,6 +612,10 @@ PrefabInstance:
       propertyPath: _itemPrefab.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7322939369614406197, guid: f1ee1efe9fd5d4f4da32b1a8ea06fb4a, type: 3}
+      propertyPath: _knockback
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7534529863406118089, guid: f1ee1efe9fd5d4f4da32b1a8ea06fb4a, type: 3}
       propertyPath: _target
       value: 
