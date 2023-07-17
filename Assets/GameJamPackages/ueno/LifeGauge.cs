@@ -15,4 +15,8 @@ public class LifeGauge : MonoBehaviour
         _slider.maxValue = _player._maxHp;
         _slider.value = _player._curentHp;
     }
+    public void Update()
+    {
+        _slider.value = _slider.value / _slider.maxValue;
+    }
 }
