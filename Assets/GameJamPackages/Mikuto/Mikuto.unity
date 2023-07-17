@@ -811,10 +811,6 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1902198730}
-    - target: {fileID: 2738783609166271626, guid: fd0cd30d3bba93c48a65e7516d8e350d, type: 3}
-      propertyPath: _moveType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6475812406600741234, guid: fd0cd30d3bba93c48a65e7516d8e350d, type: 3}
       propertyPath: m_Name
       value: Enemy
