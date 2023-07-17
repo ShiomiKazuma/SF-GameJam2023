@@ -1,15 +1,19 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent (typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
 public class BulletController : MonoBehaviour
 {
-    [SerializeField] float _damage = 10;
-    [SerializeField] float _bulletSpeed = 100;
+    [SerializeField] PlayerMuzzle _playerMuzzle;
+    float _damage;
+    float _bulletSpeed;
     Rigidbody _rb;
 
     private void Start()
     {
+        //_damage = _playerMuzzle.;
+        //_bulletSpeed = _playerMuzzle.;
         _rb = GetComponent<Rigidbody>();
         _rb.velocity = Camera.main.transform.TransformDirection(Vector3.forward) * _bulletSpeed;
         Destroy(gameObject, 3);

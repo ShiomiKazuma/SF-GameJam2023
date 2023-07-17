@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 838546736028695764}
   - component: {fileID: 488229423228160374}
   m_Layer: 0
-  m_Name: CorkBullet
+  m_Name: WaterBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0b28c1a4c16a35d4da16dc5b1c55ee5d, type: 2}
+  - {fileID: 2100000, guid: 61a4fcb2eaef4a94590a5c85d981c219, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
