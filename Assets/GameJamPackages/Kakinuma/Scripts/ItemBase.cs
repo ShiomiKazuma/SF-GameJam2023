@@ -9,7 +9,6 @@ public abstract class ItemBase : MonoBehaviour
 {
     [SerializeField] AudioClip _sound;
 
-    // Start is called before the first frame update
     public abstract void Item();
 
     private void OnTriggerEnter(Collider other)

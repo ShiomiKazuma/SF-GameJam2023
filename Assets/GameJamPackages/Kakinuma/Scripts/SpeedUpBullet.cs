@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpeedUpBullet : ItemBase
 {
+    GameObject _player;
     PlayerMuzzle _playerMuzzleScript;
     [Tooltip("’e‘¬")]
     public float _upPower;
@@ -12,7 +13,8 @@ public class SpeedUpBullet : ItemBase
     // Start is called before the first frame update
     void Start()
     {
-        _playerMuzzleScript = GetComponent<PlayerMuzzle>();
+        _player = GameObject.Find("Player");
+        _playerMuzzleScript = _player.GetComponent<PlayerMuzzle>();
     }
 
     // Update is called once per frame
